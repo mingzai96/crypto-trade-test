@@ -18,20 +18,22 @@ public class TradeController {
 
     // buy
     @PostMapping("/buy")
-    public Boolean buyCrypto(@RequestParam Long ownerId,
-                            @RequestParam String symbol,
+    public void buyCrypto(@RequestParam Long ownerId,
+                            @RequestParam String baseCurrency,
+                            @RequestParam String quoteCurrency,
                             @RequestParam double amount
     ) {
-        return tradeService.buyCrypto(ownerId, symbol, amount);
+        tradeService.buyCrypto(ownerId, baseCurrency, quoteCurrency, amount);
     }
     
     // sell
     @PostMapping("/sell")
-    public Boolean sellCrypto(@RequestParam Long ownerId,
-                            @RequestParam String symbol,
+    public void sellCrypto(@RequestParam Long ownerId,
+                            @RequestParam String baseCurrency,
+                            @RequestParam String quoteCurrency,
                             @RequestParam double amount
     ) {
-        return tradeService.sellCrypto(ownerId, symbol, amount);
+        tradeService.sellCrypto(ownerId, baseCurrency, quoteCurrency, amount);
     }
 
     @GetMapping("/tickers")

@@ -8,4 +8,5 @@ import com.crypto.crpytotest.entities.Wallet;
 
 public interface WalletRepository extends JpaRepository<Wallet, Long>{
     List<Wallet> findByOwnerId(Long ownerId);
+    Wallet findByOwnerIdAndCurrency(Long ownerid, String currency);
 }

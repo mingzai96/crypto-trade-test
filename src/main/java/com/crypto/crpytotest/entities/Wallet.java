@@ -37,4 +37,8 @@ public class Wallet {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    public void setOwner(Owner owner){
+        this.owner = owner;
+    }
 }

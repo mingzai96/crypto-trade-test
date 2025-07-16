@@ -63,4 +63,8 @@ public class Transaction {
         this.transactionDate = transactionDate;
     }
 
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
 }
