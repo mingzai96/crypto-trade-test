@@ -1,4 +1,4 @@
-package com.crypto.crpytotest.model;
+package com.crypto.crpytotest.entities;
 
 import jakarta.persistence.*;
 
@@ -9,11 +9,9 @@ import java.util.List;
 public class Owner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long id;
 
     private String username;
-    
-    private LocalDateTime createdDateTime;
 
     @OneToMany(mappedBy = "owner")
     private List<Wallet> wallets;

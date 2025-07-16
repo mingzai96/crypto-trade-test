@@ -1,12 +1,12 @@
-package com.crypto.crpytotest.model;
+package com.crypto.crpytotest.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-public class Pricing {
+public class Ticker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long id;
 
     private String symbol;
     private double bidPrice;
