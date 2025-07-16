@@ -68,6 +68,8 @@ public class TradeService {
 
         Transaction transaction = CreateTransaction(owner, symbol, "BUY", amount, price);
 
+        // probably also update ticker
+
         walletRepository.save(quoteWallet);
         walletRepository.save(baseWallet);
         transactionRepository.save(transaction);
@@ -115,6 +117,8 @@ public class TradeService {
         quoteWallet.setBalance(quoteWallet.getBalance() + (amount * price));
 
         Transaction transaction = CreateTransaction(owner, symbol, "SELL", amount, price);
+
+        // probably also update ticker
 
         walletRepository.save(quoteWallet);
         walletRepository.save(baseWallet);
