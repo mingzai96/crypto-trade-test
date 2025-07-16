@@ -39,4 +39,8 @@ public class TradeController {
         return tradeService.getAllTickers();
     }
     
+    @GetMapping("/ticker")
+    public Ticker getTickerBySymbol(@RequestParam String symbol){
+        return tradeService.getTickerBySymbol(symbol);
+    }
 }
