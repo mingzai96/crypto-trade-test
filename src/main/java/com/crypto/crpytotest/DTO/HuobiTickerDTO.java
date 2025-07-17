@@ -1,4 +1,4 @@
-package com.crypto.crpytotest.DTO;
+package com.crypto.crpytotest.dto;
 
 public class HuobiTickerDTO implements ITicker {
     private String symbol;

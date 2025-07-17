@@ -12,10 +12,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.crypto.crpytotest.DTO.ApiResponseWrapper;
-import com.crypto.crpytotest.DTO.BinanceTickerDTO;
-import com.crypto.crpytotest.DTO.HuobiTickerDTO;
-import com.crypto.crpytotest.DTO.ITicker;
+import com.crypto.crpytotest.dto.ApiResponseWrapper;
+import com.crypto.crpytotest.dto.BinanceTickerDTO;
+import com.crypto.crpytotest.dto.HuobiTickerDTO;
+import com.crypto.crpytotest.dto.ITicker;
 import com.crypto.crpytotest.entities.Ticker;
 import com.crypto.crpytotest.repository.TickerRepository;
 

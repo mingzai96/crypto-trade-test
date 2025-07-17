@@ -11,7 +11,7 @@ public class Owner {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
+    private String name;
 
     @OneToMany(mappedBy = "owner")
     private List<Wallet> wallets;
@@ -19,5 +19,18 @@ public class Owner {
     @OneToMany(mappedBy = "owner")
     private List<Transaction> transactions;
 
+    // --- Getters ---
+    public Long getId(){
+        return id;
+    }
+
+    public String getName(){
+        return name;
+    }
+    
+    // --- Setters ---
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

@@ -8,9 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.crypto.crpytotest.entities.Owner;
 import com.crypto.crpytotest.entities.Transaction;
 import com.crypto.crpytotest.entities.Wallet;
 import com.crypto.crpytotest.service.OwnerService;
+import org.springframework.web.bind.annotation.PostMapping;
+
+
 
 @RestController
 @RequestMapping("/api/owner")
@@ -30,4 +34,16 @@ public class OwnerController {
     public List<Transaction> getTransactions(@RequestParam Long ownerId) {
         return ownerService.getTransactionsByOwnerId(ownerId);
     }
+
+    // Adding this 2 for testing
+    @PostMapping("/create")
+    public Owner createOwner(@RequestParam String name) {
+        return ownerService.createOwner(name);
+    }
+    
+    @PostMapping("/wallet")
+    public Wallet createWallet(@RequestParam Long ownerId, @RequestParam String currency, @RequestParam Double balance) {
+        return ownerService.createWallet(ownerId, currency, balance);
+    }
+    
 }

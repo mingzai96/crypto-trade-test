@@ -29,6 +29,14 @@ public class Wallet {
         return balance;
     }
 
+    public LocalDateTime getCreatedDate(){
+        return createdDate;
+    }
+
+    public LocalDateTime getUpdatedDate(){
+        return updatedDate;
+    }
+
     // --- Setters ---
     public void setCurrency(String currency) {
         this.currency = currency;
@@ -40,5 +48,13 @@ public class Wallet {
 
     public void setOwner(Owner owner){
         this.owner = owner;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate){
+        this.createdDate = createdDate;
+    }
+
+    public void setUpdatedDate(LocalDateTime updatedDate){
+        this.updatedDate = updatedDate;
     }
 }
