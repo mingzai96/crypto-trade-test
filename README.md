@@ -4,6 +4,7 @@ API to retrieve latest best aggregated price (for ETHUSDT and BTCUSDT only)
 API which allows users to trade based on the latest best aggregated price.
 - api/trade/buy
 - api/trade/sell
+
 Expected JSON:
   {
     "ownerId":1,
